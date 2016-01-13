@@ -10,7 +10,7 @@ ENV LANG C.UTF-8
 
 RUN mkdir -p /opt/sdk/java
 WORKDIR /opt/sdk/java
-ADD http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz /opt/sdk/java/jdk-7u79-linux-x64.tar.gz
+ADD http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz /opt/sdk/java/jdk-7u79-linux-x64
 RUN ln -s /opt/sdk/java/jdk1.7.0_79 /opt/sdk/java/default
 ENV JAVA_HOME /opt/sdk/java/default
 RUN export JAVA_HOME
@@ -19,8 +19,7 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 RUN apt-get update && apt-get install -y --no-install-recommends libfontconfig1 && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/rstudio
-RUN wget http://ftp.itu.edu.tr/Mirror/Apache/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz
-RUN tar zxvf spark-1.6.0-bin-hadoop2.6.tgz
+ADD http://ftp.itu.edu.tr/Mirror/Apache/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz /home/rstudio/spark-1.6.0-bin-hadoop2.6
 RUN ln -s spark-1.6.0-bin-hadoop2.6 spark
 
 ADD src/loadSpark.R /home/rstudio/loadSpark.R
