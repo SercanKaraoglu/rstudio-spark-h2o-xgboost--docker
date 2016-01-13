@@ -21,7 +21,7 @@ This is a dockerfile for rstudio which contains one most useful packages for tho
   - SparkR
   - readr
 
-You can create models using xgboost, h2o, SparkR and test them using quant-trading tools like quantstrat, PerformanceAnalytics, blotter. Maybe you want to run this image on computation intensive instances of AWS.
+You can create models using xgboost, h2o, SparkR also there are some useful packages from financial toolbox such as quantstrat, PerformanceAnalytics, blotter.
 It also includes script named loadSpark.R for loading Spark under src/ folder
 
 ### Version
