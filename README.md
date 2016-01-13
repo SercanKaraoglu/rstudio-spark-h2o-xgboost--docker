@@ -38,7 +38,6 @@ This project contains open source projects below
 
 ### Installation
 
-You need Gulp installed globally:
 
 ```sh
 $ docker build -t ${tag} .
