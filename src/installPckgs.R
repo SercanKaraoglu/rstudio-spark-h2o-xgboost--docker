@@ -1,4 +1,4 @@
-install.packages("PerformanceAnalytics")
+install.packages("PerformanceAnalytics", repos='http://cran.rstudio.com/')
 install.packages("quantstrat", repos="http://R-Forge.R-project.org")
 install.packages("blotter", repos="http://R-Forge.R-project.org")
 install.packages('devtools', repos='http://cran.rstudio.com/')
