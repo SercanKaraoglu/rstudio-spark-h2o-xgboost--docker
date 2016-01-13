@@ -8,4 +8,4 @@ sc <- sparkR.init(master = "local[*]", sparkEnvir = list(spark.driver.memory="2g
 sqlContext <- sparkRSQL.init(sc)
 
 #load csv
-#train <- read.df(sqlContext, "/home/rstudio/git/homesite/data/train.csv", "com.databricks.spark.csv
+#train <- read.df(sqlContext, "/home/rstudio/git/homesite/data/train.csv", "com.databricks.spark.csv", header="true")
