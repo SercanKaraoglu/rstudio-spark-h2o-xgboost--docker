@@ -10,8 +10,7 @@ ENV LANG C.UTF-8
 
 RUN mkdir -p /opt/sdk/java
 WORKDIR /opt/sdk/java
-RUN wget http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz
-RUN tar xvf jdk-7u79-linux-x64.tar.gz
+ADD http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz /opt/sdk/java/jdk-7u79-linux-x64.tar.gz
 RUN ln -s /opt/sdk/java/jdk1.7.0_79 /opt/sdk/java/default
 ENV JAVA_HOME /opt/sdk/java/default
 RUN export JAVA_HOME
